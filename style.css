@@ -1,0 +1,1529 @@
+/* ==========================================================
+                    WHOLE WEBSITE
+========================================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+    font-size:100%;
+
+}
+
+body{
+
+    background-image:url("images/bg.png");
+    background-size:clamp(350px, 45vw, 700px);
+    background-repeat:repeat;
+    background-position:center top;
+    background-attachment:fixed;
+
+    color:#572C19;
+
+    font-family:"Quicksand",sans-serif;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+    border:0.6vw solid #572C19;
+
+}
+
+/* ---------- Page Frame ---------- */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:1.2vw;
+
+    border:0.18vw solid rgba(87,44,25,.45);
+
+    pointer-events:none;
+
+    z-index:999;
+
+}
+
+/* ==========================================================
+                        TEXT
+========================================================== */
+
+h1,
+h2,
+h3{
+
+    font-family:"DM Serif Display",serif;
+
+    color:#572C19;
+
+}
+
+h1{
+
+    text-align:center;
+
+    font-size:clamp(2rem,4vw,2.8rem);
+
+    margin:2rem 0;
+
+}
+
+h2{
+
+    text-align:center;
+
+    font-size:clamp(1.6rem,3vw,2.2rem);
+
+    margin-bottom:1.5rem;
+
+}
+
+p{
+
+    font-size:clamp(1rem,1.3vw,1.2rem);
+
+    color:#572C19;
+
+    line-height:1.8;
+
+}
+
+hr{
+
+    width:85%;
+
+    margin:4rem auto;
+
+    border:none;
+
+    border-top:0.15rem dashed rgba(87,44,25,.4);
+
+}
+
+/* ==========================================================
+                        LINKS
+========================================================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+    transition:.25s;
+
+}
+
+/* ==========================================================
+                    NAVIGATION
+========================================================== */
+
+nav{
+
+    background:#572C19;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:1rem 3.5%;
+
+    border-bottom:0.3rem solid #3A1D11;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+nav h1{
+
+    margin:0;
+
+    color:white;
+
+    font-size:clamp(1.8rem,2.8vw,2.4rem);
+
+    white-space:nowrap;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:clamp(1rem,2vw,2.2rem);
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+}
+
+nav li{
+
+    transition:.25s;
+
+}
+
+nav li:hover{
+
+    transform:translateY(-0.2rem);
+
+}
+
+nav a{
+
+    color:white;
+
+    font-size:clamp(1rem,1.3vw,1.2rem);
+
+    font-weight:700;
+
+}
+
+nav a:hover{
+
+    color:#98CDEB;
+
+}
+
+/* ==========================================================
+                    LOGIN PAGE
+========================================================== */
+
+.login-container{
+
+    width:min(90%,30rem);
+
+    margin:8vh auto;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(5px);
+
+    border:0.25rem solid #572C19;
+
+    border-radius:2rem;
+
+    padding:5%;
+
+    text-align:center;
+
+    position:relative;
+
+    box-shadow:0 0.6rem 1.5rem rgba(0,0,0,.18);
+
+}
+
+.login-container h1{
+
+    margin-bottom:1rem;
+
+}
+
+.login-container p{
+
+    margin-bottom:1.5rem;
+
+}
+
+.login-container input{
+
+    width:100%;
+
+    padding:0.9rem;
+
+    border:0.13rem solid #572C19;
+
+    border-radius:1rem;
+
+    font-size:clamp(1rem,1.2vw,1.1rem);
+
+    font-family:"Quicksand",sans-serif;
+
+    color:#572C19;
+
+    background:white;
+
+    outline:none;
+
+    transition:.25s;
+
+}
+
+.login-container input:focus{
+
+    border-color:#8A5A44;
+
+    transform:scale(1.02);
+
+}
+
+.login-container button{
+
+    margin-top:1.4rem;
+
+    padding:0.8rem 2.2rem;
+
+    border:none;
+
+    border-radius:1rem;
+
+    background:#572C19;
+
+    color:white;
+
+    font-size:clamp(1rem,1.2vw,1.1rem);
+
+    font-family:"Quicksand",sans-serif;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.login-container button:hover{
+
+    background:#75432B;
+
+    transform:translateY(-0.2rem);
+
+}
+
+#error{
+
+    margin-top:1rem;
+
+    color:#B63B3B;
+
+}
+
+/* ==========================================================
+            LOGIN PAGE DECORATIONS
+========================================================== */
+
+/* ==========================================================
+                        HOME PAGE
+========================================================== */
+
+/* ---------- HERO ---------- */
+
+.hero{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:6% auto;
+
+    text-align:center;
+
+}
+
+.hero h2{
+
+    font-size:clamp(2rem,4vw,2.8rem);
+
+    margin-bottom:1rem;
+
+}
+
+.hero p{
+
+    width:min(70%,700px);
+
+    margin:0 auto 2.5rem;
+
+    font-size:clamp(1.1rem,2vw,1.4rem);
+
+}
+
+/* ---------- SECTION TITLES ---------- */
+
+.section-title{
+
+    text-align:center;
+
+    font-size:clamp(1.8rem,3.5vw,2.5rem);
+
+    margin:5% 0 3%;
+
+}
+
+/* ---------- MEMORY LAYOUT ---------- */
+
+.memory{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:6% auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:6%;
+
+}
+
+.memory.left{
+
+    flex-direction:row;
+
+}
+
+.memory.right{
+
+    flex-direction:row-reverse;
+
+}
+
+/* ---------- TEXT ---------- */
+
+.memory-text{
+
+    flex:1;
+
+    text-align:center;
+
+}
+
+.memory-text p{
+
+    font-size:clamp(1.15rem,2vw,1.5rem);
+
+}
+
+/* ---------- PHOTOS ---------- */
+
+.hero-photo{
+
+    width:clamp(220px,30vw,400px);
+
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    border-radius:1.5rem;
+
+    border:0.35rem solid white;
+
+    box-shadow:0 .6rem 1.5rem rgba(0,0,0,.18);
+
+    transition:.35s;
+
+    flex-shrink:0;
+
+}
+
+.hero-photo:hover{
+
+    transform:scale(1.05) rotate(-2deg);
+
+}
+
+/* ---------- QUOTE ---------- */
+
+.quote{
+
+    width:min(80%,900px);
+
+    margin:7% auto;
+
+    text-align:center;
+
+}
+
+.quote h2{
+
+    font-size:clamp(1.5rem,3vw,2.2rem);
+
+    line-height:1.6;
+
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+
+    text-align:center;
+
+    padding:3%;
+
+}
+
+/* ==========================================================
+                HOME PAGE DECORATIONS
+========================================================== */
+
+/* ==========================================================
+                        OPEN WHEN
+========================================================== */
+
+/* ---------- PAGE TITLE ---------- */
+
+.letters-title{
+
+    text-align:center;
+
+    margin-top:5%;
+
+}
+
+/* ---------- LETTER GRID ---------- */
+
+.letters{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:5% auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:5%;
+
+    justify-items:center;
+
+}
+
+/* ---------- ENVELOPE ---------- */
+
+.envelope{
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    transition:.3s;
+
+}
+
+/* ---------- RANDOM ROTATIONS ---------- */
+
+.envelope:nth-child(1){ transform:rotate(-4deg); }
+.envelope:nth-child(2){ transform:rotate(3deg); }
+.envelope:nth-child(3){ transform:rotate(-2deg); }
+.envelope:nth-child(4){ transform:rotate(5deg); }
+.envelope:nth-child(5){ transform:rotate(-3deg); }
+.envelope:nth-child(6){ transform:rotate(2deg); }
+.envelope:nth-child(7){ transform:rotate(-5deg); }
+
+/* ---------- HOVER ---------- */
+
+.envelope:hover{
+
+    transform:translateY(-0.8rem) scale(1.04);
+
+}
+
+/* ---------- PUSH PIN ---------- */
+
+.pin{
+
+    width:clamp(14px,1.2vw,20px);
+
+    aspect-ratio:1;
+
+    border-radius:50%;
+
+    background:#B63B3B;
+
+    margin-bottom:-0.5rem;
+
+    z-index:5;
+
+    box-shadow:0 .2rem .5rem rgba(0,0,0,.25);
+
+}
+
+/* ---------- ENVELOPE BODY ---------- */
+
+.envelope-body{
+
+    width:clamp(170px,18vw,220px);
+
+    aspect-ratio:19/12.5;
+
+    background-image:url("images/pattern.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    border:.13rem solid #572C19;
+
+    border-radius:0 0 1rem 1rem;
+
+    position:relative;
+
+}
+
+/* ---------- ENVELOPE FLAP ---------- */
+
+.envelope-top{
+
+    width:clamp(170px,18vw,220px);
+
+    height:clamp(60px,6vw,80px);
+
+    background-image:url("images/pattern.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    border:.13rem solid #572C19;
+
+    border-bottom:none;
+
+    border-radius:1rem 1rem 0 0;
+
+    position:relative;
+
+    transform-origin:bottom;
+
+    transition:.5s;
+
+    z-index:2;
+
+}
+
+.envelope:hover .envelope-top{
+
+    transform:rotateX(180deg);
+
+}
+
+/* ---------- LABEL ---------- */
+
+.envelope p{
+
+    margin-top:1rem;
+
+    font-size:clamp(1rem,1.5vw,1.25rem);
+
+    font-weight:700;
+
+    text-align:center;
+
+}
+
+/* ---------- LETTER ---------- */
+
+.message{
+
+    display:none;
+
+    width:min(90%,900px);
+
+    margin-top:-1rem;
+
+    background:#FFFDF8;
+
+    border:.2rem solid #572C19;
+
+    border-radius:1.6rem;
+
+    padding:4%;
+
+    box-shadow:0 .6rem 1.5rem rgba(0,0,0,.18);
+
+}
+
+/* ---------- LETTER PHOTO ---------- */
+
+.message img{
+
+    width:100%;
+
+    border-radius:1.2rem;
+
+    margin-bottom:1.5rem;
+
+}
+
+/* ---------- LETTER TEXT ---------- */
+
+.message p{
+
+    text-align:left;
+
+    font-size:clamp(1rem,1.3vw,1.2rem);
+
+    line-height:1.9;
+
+}
+
+/* ==========================================================
+            OPEN WHEN DECORATIONS
+========================================================== */
+
+/* ==========================================================
+                        CALENDAR
+========================================================== */
+
+/* ---------- PAGE TITLE ---------- */
+
+.calendar-title{
+
+    text-align:center;
+
+    margin-top:5%;
+
+}
+
+/* ---------- CALENDAR CONTAINER ---------- */
+
+.calendar-container{
+
+    width:min(90%,1000px);
+
+    margin:5% auto;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(5px);
+
+    border:0.25rem solid #572C19;
+
+    border-radius:2rem;
+
+    padding:4%;
+
+    box-shadow:0 .8rem 1.6rem rgba(0,0,0,.18);
+
+}
+
+/* ---------- HEADER ---------- */
+
+.calendar-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:2rem;
+
+}
+
+.calendar-header h2{
+
+    margin:0;
+
+    font-size:clamp(1.6rem,3vw,2.2rem);
+
+}
+
+/* ---------- MONTH BUTTONS ---------- */
+
+.calendar-header button{
+
+    width:clamp(42px,4.5vw,55px);
+
+    aspect-ratio:1;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#572C19;
+
+    color:white;
+
+    font-size:clamp(1rem,2vw,1.4rem);
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.calendar-header button:hover{
+
+    background:#75432B;
+
+    transform:scale(1.08);
+
+}
+
+/* ---------- WEEKDAYS ---------- */
+
+.weekdays{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    text-align:center;
+
+    margin-bottom:1rem;
+
+    font-weight:bold;
+
+    font-size:clamp(.9rem,1.3vw,1.1rem);
+
+}
+
+/* ---------- DAYS ---------- */
+
+#calendar{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    gap:clamp(6px,1vw,12px);
+
+}
+
+.day{
+
+    aspect-ratio:1/1;
+
+    min-height:70px;
+
+    background:#FFFDF8;
+
+    border:.13rem solid #572C19;
+
+    border-radius:1rem;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:clamp(1rem,1.5vw,1.3rem);
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.day:hover{
+
+    background:#CFE7F5;
+
+    transform:translateY(-0.2rem);
+
+}
+
+.empty{
+
+    aspect-ratio:1/1;
+
+    min-height:70px;
+
+}
+
+/* ---------- POPUP ---------- */
+
+.popup{
+
+    display:none;
+
+    width:min(90%,700px);
+
+    margin:4% auto;
+
+    padding:5%;
+
+    background:white;
+
+    border:.25rem solid #572C19;
+
+    border-radius:1.8rem;
+
+    box-shadow:0 .6rem 1.5rem rgba(0,0,0,.18);
+
+}
+
+.popup h2{
+
+    margin-bottom:1.5rem;
+
+}
+
+.popup input{
+
+    width:100%;
+
+    margin-bottom:1.2rem;
+
+}
+
+.popup textarea{
+
+    width:100%;
+
+    min-height:180px;
+
+    padding:1rem;
+
+    border-radius:1rem;
+
+    border:.13rem solid #572C19;
+
+    resize:vertical;
+
+    font-family:"Quicksand",sans-serif;
+
+    font-size:clamp(1rem,1.2vw,1.1rem);
+
+    color:#572C19;
+
+}
+
+.popup textarea:focus{
+
+    outline:none;
+
+}
+
+.popup button{
+
+    margin-top:1.2rem;
+
+    padding:.8rem 2.2rem;
+
+    border:none;
+
+    border-radius:1rem;
+
+    background:#572C19;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:clamp(1rem,1.2vw,1.1rem);
+
+    transition:.3s;
+
+}
+
+.popup button:hover{
+
+    background:#75432B;
+
+    transform:translateY(-0.2rem);
+
+}
+
+/* ---------- SAVED IMAGES ---------- */
+
+.popup img{
+
+    width:clamp(160px,30vw,260px);
+
+    border-radius:1rem;
+
+    margin-top:1.2rem;
+
+    border:.2rem solid white;
+
+    box-shadow:0 .5rem 1.2rem rgba(0,0,0,.15);
+
+}
+
+/* ==========================================================
+                CALENDAR DECORATIONS
+========================================================== */
+
+/* ==========================================================
+                    I LOVE YOU PAGE
+========================================================== */
+.love-page{
+
+    width:100%;
+
+    max-width:1300px;
+
+    margin:5% auto;
+
+    padding:0 10%;
+
+    text-align:center;
+
+}
+
+.love-page h1{
+
+    font-size:clamp(2rem,4vw,2.8rem);
+
+    margin-bottom:1%;
+
+}
+
+.subtitle{
+
+    font-size:clamp(1.1rem,2vw,1.5rem);
+
+    margin-bottom:3%;
+
+}
+
+.letter{
+
+    width:min(70%,800px);
+
+    margin:auto;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(4px);
+
+    border:.25rem solid #572C19;
+
+    border-radius:2rem;
+
+    padding:5%;
+
+    box-shadow:0 .6rem 1.4rem rgba(0,0,0,.18);
+
+}
+
+.letter p{
+
+    max-width:600px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+    font-size:clamp(1.1rem,1.8vw,1.5rem);
+
+    line-height:2;
+
+}
+
+/* ==========================================================
+                I LOVE YOU DECORATIONS
+========================================================== */
+
+/* ==========================================================
+                    ANIMATIONS
+========================================================== */
+
+/* ---------- FLOAT ---------- */
+
+@keyframes float{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-0.8rem);
+
+    }
+
+}
+
+/* ---------- SWAY ---------- */
+
+@keyframes sway{
+
+    0%{
+
+        transform:rotate(-6deg);
+
+    }
+
+    50%{
+
+        transform:rotate(6deg);
+
+    }
+
+    100%{
+
+        transform:rotate(-6deg);
+
+    }
+
+}
+
+/* ---------- VINYL ---------- */
+
+@keyframes vinyl{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ---------- STAR SCROLL ---------- */
+
+@keyframes starScroll{
+
+    from{
+
+        transform:translateX(100vw);
+
+    }
+
+    to{
+
+        transform:translateX(-120vw);
+
+    }
+
+}
+
+/* ---------- IMAGE DECORATIONS ---------- */
+
+.bear{
+
+    position:absolute;
+
+    width:clamp(110px,12vw,180px);
+
+    animation:float 4s ease-in-out infinite;
+
+    z-index:2;
+
+}
+
+.bunny{
+
+    position:absolute;
+
+    width:clamp(110px,12vw,180px);
+
+    animation:float 5s ease-in-out infinite;
+
+    z-index:2;
+
+}
+
+.bouquet{
+
+    position:absolute;
+
+    width:clamp(110px,12vw,180px);
+
+    animation:sway 4s ease-in-out infinite;
+
+    transform-origin:bottom center;
+
+    z-index:2;
+
+}
+
+.record{
+
+    position:absolute;
+
+    width:clamp(110px,12vw,180px);
+
+    animation:vinyl 8s linear infinite;
+
+    z-index:2;
+
+}
+
+.star-brown{
+
+    position:absolute;
+
+    width:clamp(60px,7vw,100px);
+
+    animation:sway 5s ease-in-out infinite;
+
+    z-index:2;
+
+}
+
+.button-brown{
+
+    position:absolute;
+
+    width:clamp(60px,6vw,90px);
+
+    z-index:2;
+
+}
+
+.cat-stamp{
+
+    position:absolute;
+
+    width:clamp(90px,8vw,130px);
+
+    z-index:2;
+
+}
+
+.gummy-bear{
+
+    position:absolute;
+
+    width:clamp(90px,8vw,130px);
+
+    z-index:2;
+
+}
+
+.lace-heart{
+
+    position:absolute;
+
+    width:clamp(110px,12vw,170px);
+
+    z-index:2;
+
+}
+
+/* ---------- MOVING STARS ---------- */
+
+.star-strip{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:0;
+
+}
+
+.star-strip img{
+
+    position:absolute;
+
+    width:clamp(180px,30vw,380px);
+
+    opacity:.45;
+
+    animation:starScroll 18s linear infinite;
+
+}
+
+.star-strip img:nth-child(1){
+
+    top:8%;
+
+    animation-delay:0s;
+
+}
+
+.star-strip img:nth-child(2){
+
+    top:34%;
+
+    animation-delay:-6s;
+
+}
+
+.star-strip img:nth-child(3){
+
+    top:66%;
+
+    animation-delay:-12s;
+
+}
+
+/* ---------- DECORATION HOVER ---------- */
+
+.bear:hover,
+.bunny:hover,
+.bouquet:hover,
+.record:hover,
+.button-brown:hover,
+.cat-stamp:hover,
+.gummy-bear:hover,
+.lace-heart:hover,
+.star-brown:hover{
+
+    filter:brightness(1.08);
+
+    transition:.3s;
+
+}
+/* ==========================================================
+                    DECORATION POSITIONS
+========================================================== */
+
+
+/* ================= LOGIN ================= */
+
+.login-page .bear{
+
+    top:18%;
+    left:4%;
+
+}
+
+.login-page .lace-heart{
+
+    top:8%;
+    right:6%;
+
+}
+
+.login-page .button-brown{
+
+    bottom:10%;
+    left:12%;
+
+}
+
+
+/* ================= HOME ================= */
+
+.home-page .bear{
+
+    top:12%;
+    left:3%;
+
+}
+
+.home-page .bouquet{
+
+    top:8%;
+    right:4%;
+
+}
+
+.home-page .button-brown{
+
+    top:23%;
+    right:20%;
+
+}
+
+.home-page .bunny{
+
+    top:58%;
+    right:3%;
+
+}
+
+.home-page .star-brown{
+
+    bottom:8%;
+    left:4%;
+
+}
+
+
+/* ================= OPEN WHEN ================= */
+
+.letters-page .record{
+
+    top:10%;
+    right:4%;
+
+}
+
+.letters-page .lace-heart{
+
+    top:8%;
+    left:20%;
+
+}
+
+.letters-page .bear{
+
+    top:45%;
+    left:35%;
+
+}
+
+.letters-page .gummy-bear{
+
+    bottom:8%;
+    right:4%;
+
+}
+
+
+/* ================= CALENDAR ================= */
+
+.calendar-page .bouquet{
+
+    top:10%;
+    right:4%;
+
+}
+
+.calendar-page .cat-stamp{
+
+    top:55%;
+    left:4%;
+
+}
+
+.calendar-page .button-brown{
+
+    top:32%;
+    right:5%;
+
+}
+
+.calendar-page .star-brown{
+
+    bottom:10%;
+    left:5%;
+
+}
+
+
+/* ================= ILY ================= */
+
+.ily-page .bear{
+
+    top:16%;
+    left:3%;
+
+}
+
+.ily-page .bouquet{
+
+    top:10%;
+    right:3%;
+
+}
+
+.ily-page .lace-heart{
+
+    top:45%;
+    left:3%;
+
+}
+
+.ily-page .gummy-bear{
+
+    bottom:10%;
+    left:6%;
+
+}
+
+.ily-page .bunny{
+
+    bottom:6%;
+    right:4%;
+
+}
+
+/* ==========================================================
+                    MOBILE
+========================================================== */
+
+@media (max-width:768px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:1rem;
+
+        padding:1rem;
+
+    }
+
+    nav ul{
+
+        justify-content:center;
+
+        gap:1rem;
+
+    }
+
+    .memory,
+    .memory.left,
+    .memory.right{
+
+        flex-direction:column;
+
+        gap:2rem;
+
+        text-align:center;
+
+    }
+
+    .memory-text{
+
+        order:2;
+
+    }
+
+    .hero-photo{
+
+        order:1;
+
+    }
+
+    .letter{
+
+        width:100%;
+
+    }
+
+    .calendar-container{
+
+        width:96%;
+
+    }
+
+}
